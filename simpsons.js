@@ -2,17 +2,17 @@
 const main = document.querySelector("main")
 
 
-function simpsonCharacter(simpsons) {
+function simpsonCharacter(simpson) {
 
     const div = document.createElement("div")
     div.innerHTML = `
     
     <div>
-    <h1>${simpsons.character}:</h1>
-    <p>"${simpsons.quote}"</p>
+    <h1>${simpson.character}:</h1>
+    <p>"${simpson.quote}"</p>
     <figure>
-    <img src=${simpsons.image} alt=${simpsons.character} />
-    <figcaption><a href="simpsons.html?simpsons=${simpsons.character}">${simpsons.character}</a></figcaption>
+    <img src=${simpson.image} alt=${simpson.character} />
+    <figcaption><a href="simpsons.html?character=${simpson.character}">${simpson.character}</a></figcaption>
     </figure>
     
     
@@ -24,7 +24,7 @@ function simpsonCharacter(simpsons) {
 
 const url = new URL(window.location)
 const queryString = new URLSearchParams(url.search)
-fetch(`https://thesimpsonsquoteapi.glitch.me/quotes${queryString.get('simpsons')}`)
+fetch(`https://thesimpsonsquoteapi.glitch.me/quotes/${queryString.get('character')}`)
 
 fetch(url)
     .then(urlInfo => {
@@ -33,5 +33,7 @@ fetch(url)
     .then(jsonInfo => {
         jsonInfo.forEach(urlInfo => {
             simpsonCharacter(urlInfo)
+            console.log(urlInfo)
         });
+        
     });

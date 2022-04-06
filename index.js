@@ -11,7 +11,7 @@ function simpsonCharacter(simpson) {
     <p>"${simpson.quote}"</p>
     <figure>
     <img src=${simpson.image} alt=${simpson.character} />
-    <figcaption><a href="simpsons.html?simpson=${simpson.character}">${simpson.character}</a></figcaption>
+    <figcaption><a href="simpsons.html?character=${simpson.character}">${simpson.character}</a></figcaption>
     </figure>
     
     </div>
