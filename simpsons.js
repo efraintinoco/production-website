@@ -12,7 +12,7 @@ function simpsonCharacter(simpson) {
     <p>"${simpson.quote}"</p>
     <figure>
     <img src=${simpson.image} alt=${simpson.character} />
-    <figcaption><a href="simpsons.html?character=${simpson.character}">${simpson.character}</a></figcaption>
+    <figcaption><a href="index.html?character=${simpson.character}">${simpson.character}</a></figcaption>
     </figure>
     
     
@@ -24,10 +24,8 @@ function simpsonCharacter(simpson) {
 
 const url = new URL(window.location)
 const queryString = new URLSearchParams(url.search)
-fetch(`https://thesimpsonsquoteapi.glitch.me/quotes${queryString.get('character')}`)
-console.log(jsonInfo)
+fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${queryString.get('character')}`)
 
-fetch(url)
     .then(urlInfo => {
         return urlInfo.json();
     })
