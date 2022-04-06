@@ -23,8 +23,10 @@ function simpsonCharacter(simpson) {
 fetch(url)
     .then(urlInfo => {
         return urlInfo.json();
+        
     })
     .then(jsonInfo => {
+        console.log(jsonInfo)
         jsonInfo.forEach(urlInfo => {
             simpsonCharacter(urlInfo)
 
