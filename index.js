@@ -7,7 +7,6 @@ function simpsonCharacter(simpson) {
     const div = document.createElement("div")
     div.innerHTML = `
     <div>
-    <h1>${simpson.character}:</h1>
     
     <figure>
     <img src=${simpson.image} alt=${simpson.character} />
