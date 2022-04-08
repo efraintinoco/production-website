@@ -4,6 +4,11 @@ body {
     text-align: center;
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
+    background-image: url(clouds-the-simpsons.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
     
 }
 
@@ -14,7 +19,9 @@ figcaption {
     font-size: 35px;
     }
 h1 a {
-    font-size: 50px;
+    color: hsl(11.4, 87.72%, 50.29%);
+    font-size: 60px;
+    
 }
 h2{
     padding-top: 5px;
@@ -25,5 +32,5 @@ p {
     font-size: 25px;
 }
 a:hover {
-    color: hsl(11.4, 87.72%, 70.29%);
+   color: hsl(52.97,95.98%,48.82%)
 }

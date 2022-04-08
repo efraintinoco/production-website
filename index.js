@@ -1,4 +1,4 @@
-const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=40"
+const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=50"
 const main = document.querySelector("main")
 
 
@@ -20,17 +20,15 @@ function simpsonCharacter(simpson) {
 
 
 fetch(url)
-    .then(urlInfo => {
-        return urlInfo.json();
+    .then(response => {
+        return response.json();
         
     })
-    .then(jsonInfo => {
-        console.log(jsonInfo)
-        jsonInfo.forEach(urlInfo => {
-            simpsonCharacter(urlInfo)
 
-
-        });
-    });
-
-
+    .then(response => {
+        response.filter(character => character === "Homer Simpson" || "Bart Simpson")
+            .forEach(response => {
+                simpsonCharacter(response)
+                console.log(response)
+            })
+    })
