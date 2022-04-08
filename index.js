@@ -18,17 +18,17 @@ function simpsonCharacter(simpson) {
     main.append(div)
 }
 
-
 fetch(url)
     .then(response => {
         return response.json();
-        
     })
-
     .then(response => {
-        response.filter(character => character === "Homer Simpson" || "Bart Simpson")
-            .forEach(response => {
-                simpsonCharacter(response)
-                console.log(response)
-            })
+        const imageURLs = response.map(character => character.image)
+        const uniqueImageURLs = [...(new Set(imageURLs))]
+        uniqueImageURLs.map(imageURL => {
+            return {
+                image: imageURL,
+                character: response.find(character => character.image === imageURL).character
+            }
+        }).forEach(character => simpsonCharacter(character))
     })
