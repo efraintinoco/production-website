@@ -3,22 +3,17 @@ const main = document.querySelector("main")
 
 
 function simpsonCharacter(simpson) {
-   
-    const button = document.querySelector("button")
-   // button.addEventListner("click",() => )
-   
+
     const div = document.createElement("div")
     div.innerHTML = `
     
     <div>
     <h1>${simpson.character}:</h1>
     <p>"${simpson.quote}"</p>
-    
     <figure>
     <img src=${simpson.image} alt=${simpson.character} />
-    
-    
-    
+    <figcaption><a href="index.html?character=${simpson.character}">${simpson.character}</a></figcaption>
+    <a href="simpsons.html?character=${simpson.character}">next quote</a>
     </figure>
     
     
