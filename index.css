@@ -34,3 +34,7 @@ p {
 a:hover {
    color: hsl(52.97,95.98%,48.82%)
 }
+input{
+    padding: 4px;
+}
+

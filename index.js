@@ -1,6 +1,19 @@
 const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=40"
 const main = document.querySelector("main")
+const form = document.querySelector("form")
 
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target)
+    const firstName= formData.get("first-name")
+});
+
+
+function welcomeMessage(firstName) {
+    localStorage.setItem("name", "firstName")
+    
+}
 
 function simpsonCharacter(simpson) {
 
