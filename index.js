@@ -1,40 +1,33 @@
 const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=40"
 const main = document.querySelector("main")
 const form = document.querySelector("form")
+const welcomeMessage = document.getElementById("welcomeMessage")
+
+
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target)
-    const firstName= formData.get("first-name")
+    const firstName = formData.get("first-name")
+    document.getElementById("welcomeMessage").innerHTML = `Welcome ${firstName} ! <br> Click below for your Mystery Quote`;
+    localStorage.setItem("first-name")
 });
 
 
-function welcomeMessage(firstName) {
-    localStorage.setItem("name", "firstName")
-    
-}
 
 function simpsonCharacter(simpson) {
-
     const div = document.createElement("div")
-    
-    
     div.innerHTML = `
     <div>
-    
     <figure>
     <img src=${simpson.image} alt=${simpson.character} />
     <figcaption><a href="simpsons.html?character=${simpson.character}">${simpson.character}</a></figcaption>
-    
-    
     </figure>
-    
     </div>
-`
+    `
     main.append(div)
 }
- 
 
 fetch(url)
     .then(response => {
@@ -50,3 +43,6 @@ fetch(url)
             }
         }).forEach(character => simpsonCharacter(character))
     })
+.catch(error => { 
+    console.error(error.message);
+});

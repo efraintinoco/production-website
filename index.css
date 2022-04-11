@@ -32,9 +32,17 @@ p {
     font-size: 25px;
 }
 a:hover {
-   color: hsl(52.97,95.98%,48.82%)
+    color: hsl(52.97,95.98%,48.82%)
 }
 input{
     padding: 4px;
 }
 
+input:invalid, textarea:invalid {
+    border: 2px solid hsl(0, 50%, 50%);
+}
+
+#welcomeMessage{
+    color: hsl(11.4, 87.72%, 50.29%);
+
+}
