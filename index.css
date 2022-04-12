@@ -46,3 +46,6 @@ input:invalid, textarea:invalid {
     color: hsl(11.4, 87.72%, 50.29%);
 
 }
+.hidden{
+    display: none;
+}
