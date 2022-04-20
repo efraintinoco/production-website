@@ -2,25 +2,32 @@ const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=500"
 const main = document.querySelector("main")
 const form = document.querySelector("form")
 const welcomeMessage = document.getElementById("welcomeMessage")
+let firstName = ""
 
-
+/*
+function showHideWelcomeMessage() { 
+    if (document.getElementById ("first-name").value == true) {
+        document.getElementById("form").style.display="none"
+    } else { 
+        document.getElementById("form").style.display="block"
+    }
+}
+*/
 
 form.addEventListener("submit", (event) => {
+    
     event.preventDefault();
-
+    
     const formData = new FormData(event.target)
     const firstName = formData.get("first-name")
     document.getElementById("welcomeMessage").innerHTML = `Welcome ${firstName} ! <br> Click below for your Mystery Quote`;
     
     localStorage.setItem("first-name",firstName);
+    
     const form = document.querySelector("form")
     form.classList.add("hidden")
     console.log(form)
-    
-  
 });
-
-
 
 function simpsonCharacter(simpson) {
     const div = document.createElement("div")

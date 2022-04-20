@@ -8,32 +8,35 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
-    
 }
 
 a{
     color: hsl(11.4, 87.72%, 50.29%);
 }
+
 figcaption {
     font-size: 35px;
     }
-h1 a {
+
+    h1 a {
     color: hsl(11.4, 87.72%, 50.29%);
     font-size: 60px;
-    
 }
+
 h2{
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 40px;
 }
+
 p {
     font-size: 25px;
 }
+
 a:hover {
     color: hsl(52.97,95.98%,48.82%)
 }
+
 input{
     padding: 4px;
 }
@@ -44,8 +47,8 @@ input:invalid, textarea:invalid {
 
 #welcomeMessage{
     color: hsl(11.4, 87.72%, 50.29%);
-
 }
+
 .hidden{
     display: none;
 }
