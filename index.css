@@ -18,15 +18,14 @@ figcaption {
     font-size: 35px;
 }
 
-    h1 a {
+h1 a {
     color: hsl(11.4, 87.72%, 50.29%);
     font-size: 60px;
 }
 
-h2{
+div{
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 40px;
 }
 
 p {
@@ -47,6 +46,7 @@ input:invalid, textarea:invalid {
 
 #welcomeMessage{
     color: hsl(11.4, 87.72%, 50.29%);
+    font-size: 40px;
 }
 
 .hidden{
