@@ -1,6 +1,6 @@
 I created a Simpson quote app. It uses the Simpsons Quotes API at https://thesimpsonsquoteapi.glitch.me/ . 
 The app home page has a input that ask the visitor to enter their name. Once their name is entered, it gives them a 
-personalized welcome message, inviting them to click any of the characters below for a funny quote. See screen shots below. 
+personalized welcome message, inviting them to click any of the characters below for a funny quote. See screenshots below. 
 Website public link is https://efraintinoco.github.io/production-website/
 
 ![image](https://user-images.githubusercontent.com/97262614/164364151-f7374b20-3295-4bff-ac78-ae3e670b5082.png)
