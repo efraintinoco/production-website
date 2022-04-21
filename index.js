@@ -45,4 +45,5 @@ fetch(url)
     })
     .catch(error => {
         console.error(error.message)
+        window.location.href = "404.html"
     })
