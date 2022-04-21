@@ -1,22 +1,23 @@
-const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=500"
-const main = document.querySelector("main")
-const form = document.querySelector("form")
+const url = 'https://thesimpsonsquoteapi.glitch.me/quotes?count=500'
+const main = document.querySelector('main')
+const form = document.querySelector('form')
+const welcomeMessage = document.getElementById('welcomeMessage')
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
     const formData = new FormData(event.target)
-    const firstName = formData.get("first-name")
-    document.classList("welcomeMessage").innerHTML = `Welcome ${firstName} ! <br> Click below for your Mystery Quote`;
+    const firstName = formData.get('first-name')
+    document.getElementById('welcomeMessage').innerHTML = `Welcome ${firstName} ! <br> Click below for your Mystery Quote`
 
-    localStorage.setItem("first-name", firstName);
+    localStorage.setItem('first-name', firstName)
 
-    const form = document.querySelector("form")
-    form.classList.add("hidden")
+    const form = document.querySelector('form')
+    form.classList.add('hidden')
     console.log(form)
-});
+})
 
 function simpsonCharacter(simpson) {
-    const div = document.createElement("div")
+    const div = document.createElement('div')
     div.innerHTML = `
     <div>
     <figure>
@@ -30,7 +31,7 @@ function simpsonCharacter(simpson) {
 
 fetch(url)
     .then(response => {
-        return response.json();
+        return response.json()
     })
     .then(response => {
         const imageURLs = response.map(character => character.image)
@@ -44,5 +45,4 @@ fetch(url)
     })
     .catch(error => {
         console.error(error.message)
-        window.location.href = "404.html"
     })
