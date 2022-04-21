@@ -31,4 +31,4 @@ fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${queryString.get(
   .catch(error => {
     console.error(error.message)
     window.location.href = "404.html"
-})
+  })
