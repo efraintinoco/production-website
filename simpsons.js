@@ -1,9 +1,8 @@
-const main = document.querySelector("main")
+const main = document.querySelector('main')
 
-function simpsonCharacter(simpson) {
-
-    const div = document.createElement("div")
-    div.innerHTML = `
+function simpsonCharacter (simpson) {
+  const div = document.createElement('div')
+  div.innerHTML = `
     <div>
         <h1>${simpson.character}:</h1>
         <p>"${simpson.quote}"</p>
@@ -14,20 +13,19 @@ function simpsonCharacter(simpson) {
         </figure>
     </div>
     `
-    main.append(div)
+  main.append(div)
 }
 
 const url = new URL(window.location)
 const queryString = new URLSearchParams(url.search)
 fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${queryString.get('character')}`)
 
-    .then(urlInfo => {
-        return urlInfo.json();
+  .then(urlInfo => {
+    return urlInfo.json()
+  })
+  .then(jsonInfo => {
+    jsonInfo.forEach(urlInfo => {
+      simpsonCharacter(urlInfo)
+      console.log(urlInfo)
     })
-    .then(jsonInfo => {
-
-        jsonInfo.forEach(urlInfo => {
-            simpsonCharacter(urlInfo)
-            console.log(urlInfo)
-        });
-    });
+  })
