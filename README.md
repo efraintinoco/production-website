@@ -61,4 +61,8 @@ The site:
 * [ ] - User input is validated
 * [ ] - Errors are handled
 
+![image](https://user-images.githubusercontent.com/97262614/164364151-f7374b20-3295-4bff-ac78-ae3e670b5082.png)
 
+![image](https://user-images.githubusercontent.com/97262614/164364179-74f68c58-c91b-4a29-9bfb-7ab62e08d34e.png)
+
+![image](https://user-images.githubusercontent.com/97262614/164364267-a2ffe217-c990-4b4e-acd9-868368bd31d2.png)
