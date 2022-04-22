@@ -16,8 +16,7 @@ function simpsonCharacter(simpson) {
   main.append(div)
 }
 
-const url = new URL(window.location)
-const queryString = new URLSearchParams(url.search)
+const queryString = new URLSearchParams(window.location.search)
 fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${queryString.get('character')}`)
   .then(urlInfo => {
     return urlInfo.json()
@@ -25,7 +24,6 @@ fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?character=${queryString.get(
   .then(jsonInfo => {
     jsonInfo.forEach(urlInfo => {
       simpsonCharacter(urlInfo)
-      console.log(urlInfo)
     })
   })
   .catch(error => {

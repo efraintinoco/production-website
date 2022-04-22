@@ -1,19 +1,18 @@
 const url = 'https://thesimpsonsquoteapi.glitch.me/quotes?count=500'
 const main = document.querySelector('main')
 const form = document.querySelector('form')
-const welcomeMessage = document.getElementById('welcomeMessage')
+const welcomeMessage = document.querySelector('#welcomeMessage')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
     const formData = new FormData(event.target)
     const firstName = formData.get('first-name')
-    document.getElementById('welcomeMessage').innerHTML = `Welcome ${firstName} ! <br> Click below for your Mystery Quote`
+    document.querySelector('#welcomeMessage').innerHTML = `Welcome ${firstName} ! <br> Click below for your Mystery Quote`
 
     localStorage.setItem('first-name', firstName)
 
     const form = document.querySelector('form')
     form.classList.add('hidden')
-    console.log(form)
 })
 
 function simpsonCharacter(simpson) {
